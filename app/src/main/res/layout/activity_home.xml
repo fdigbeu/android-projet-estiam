@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Activities.HomeActivity">
+
+    <include layout="@layout/app_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productsRV"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/padding_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/searchFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomFloatingButton"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/padding_toolbar"
+            android:src="@drawable/ic_search_32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            style="@style/CustomTextInputLayout"
+            android:hint="@string/lb_key_word"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/searchFB"
+            android:layout_marginLeft="@dimen/padding_toolbar"
+            android:layout_marginBottom="@dimen/search_padding_bottom"
+            app:startIconDrawable="@drawable/ic_search_24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/homeProgress"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/infoMessage"
+            android:gravity="center"
+            android:layout_margin="@dimen/padding_toolbar"
+            android:textSize="@dimen/app_title_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

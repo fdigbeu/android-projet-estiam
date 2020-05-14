@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Activities.ProductActivity">
+
+    <include layout="@layout/app_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/productDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productDetailRV"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/padding_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sendMessageFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomFloatingButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/padding_toolbar"
+            android:src="@drawable/ic_send_message_32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/messageInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomTextInputLayout"
+            android:hint="@string/lb_enter_comment"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/sendMessageFB"
+            android:layout_marginLeft="@dimen/padding_toolbar"
+            android:layout_marginBottom="@dimen/search_padding_bottom"
+            app:startIconDrawable="@drawable/ic_message_24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/messageField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

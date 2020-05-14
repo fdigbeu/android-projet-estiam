@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Activities.UserActivity">
+
+    <include layout="@layout/app_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/padding_item_10dp"
+        android:paddingEnd="@dimen/padding_item_10dp"
+        android:gravity="center">
+
+        <!-- form header -->
+        <ImageView
+            android:id="@+id/imageHeader"
+            android:layout_width="@dimen/header_image_size"
+            android:layout_height="@dimen/header_image_size"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_registration_32dp"
+            android:scaleType="fitXY"/>
+
+        <!-- user progress -->
+        <ProgressBar
+            android:id="@+id/userProgress"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/padding_item_10dp"
+            android:layout_below="@+id/imageHeader"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- user name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userNameInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userProgress"
+            style="@style/CustomTextInputLayout"
+            android:layout_marginTop="@dimen/padding_item_10dp"
+            android:hint="@string/lb_enter_your_name"
+            app:startIconDrawable="@drawable/ic_user_disconnected_32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- user email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userEmailInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userNameInputLayout"
+            android:layout_marginTop="@dimen/padding_item_10dp"
+            style="@style/CustomTextInputLayout"
+            android:hint="@string/lb_enter_your_email"
+            app:startIconDrawable="@drawable/ic_user_email_24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userEmailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- user password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userPasswordInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userEmailInputLayout"
+            android:layout_marginTop="@dimen/padding_item_10dp"
+            style="@style/CustomTextInputLayout"
+            app:passwordToggleEnabled="true"
+            android:hint="@string/lb_enter_your_password"
+            app:startIconDrawable="@drawable/ic_user_password_24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userPasswordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- form buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonValidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userPasswordInputLayout"
+            android:layout_marginTop="@dimen/padding_item_10dp"
+            style="@style/CustomMaterialButton"
+            android:text="@string/lb_form_register"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

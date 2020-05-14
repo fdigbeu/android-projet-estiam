@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:selectableItemBackground"
+    android:layout_margin="@dimen/padding_item"
+    android:padding="@dimen/padding_item"
+    android:clickable="true"
+    android:id="@+id/productFavCard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iconFavProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/titleFavProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/app_text_size"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="2"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iconFavDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:selectableItemBackground"
+            android:clickable="true"
+            android:src="@drawable/ic_delete_32dp"
+            android:background="@drawable/ic_delete_radius"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_item"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

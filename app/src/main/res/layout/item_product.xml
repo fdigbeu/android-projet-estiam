@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:selectableItemBackground"
+    android:layout_margin="@dimen/padding_item"
+    android:padding="@dimen/padding_item"
+    android:clickable="true"
+    android:id="@+id/productCard">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iconProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/app_text_size"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="2"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
